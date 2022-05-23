@@ -2,6 +2,9 @@
 
 section .data
 books dd 10
+counter dq 50
+sum dq 30
+number dw 10
 
 section .text
 global CMAIN
@@ -16,7 +19,14 @@ CMAIN:
     mov rax, rbx
     mov rcx, rax
     
-    mov
-    
+    mov dword[books], 20
+    mov rax, [counter]
+
+    ;mov al, 256 ;al=0
+    ;mov byte[number], 256 ;number=0
+     
+    mov ax, 256
+    mov word[number], 256
+       
     xor rax, rax
     ret
