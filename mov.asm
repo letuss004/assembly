@@ -2,6 +2,9 @@
 
 section .data
 books dd 10
+counter dq 50
+sum dq 30
+
 
 section .text
 global CMAIN
@@ -15,8 +18,9 @@ CMAIN:
     mov rbx, 7
     mov rax, rbx
     mov rcx, rax
-    
-    mov
+        
+    mov qword[books], 20
+    mov rax, qword[counter]
     
     xor rax, rax
     ret
