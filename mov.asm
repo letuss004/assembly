@@ -4,6 +4,7 @@ section .data
 books dd 10
 counter dq 50
 sum dq 30
+number dw 10
 
 
 section .text
@@ -18,9 +19,15 @@ CMAIN:
     mov rbx, 7
     mov rax, rbx
     mov rcx, rax
-        
-    mov qword[books], 20
-    mov rax, qword[counter]
     
+    mov dword[books], 20
+    mov rax, [counter]
+
+    ;mov al, 256 ;al=0
+    ;mov byte[number], 256 ;number=0
+     
+    mov ax, 256
+    mov word[number], 256
+       
     xor rax, rax
     ret
